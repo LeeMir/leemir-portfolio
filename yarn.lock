@@ -10363,6 +10363,11 @@ parseurl@^1.3.3, parseurl@~1.3.3:
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.3.tgz#9da19e7bee8d12dff0513ed5b76957793bc2e8d4"
   integrity sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==
 
+particlesjs@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/particlesjs/-/particlesjs-2.2.3.tgz#4d213ca740679fc1ccc772e8d864b884a091f37e"
+  integrity sha512-f0rL80Agqdsrnv/uhlLewv+LMdiXHu9MYPzMv0ZLPM06nLx3zmAXMH882fxqO6Uzb91csli8WlWaYd2XPN0d/Q==
+
 pascal-case@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pascal-case/-/pascal-case-2.0.1.tgz#2d578d3455f660da65eca18ef95b4e0de912761e"
@@ -13383,6 +13388,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typeit@^8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/typeit/-/typeit-8.4.0.tgz#d80bbd2c183ed67c82e8d9d38dd7ffd190fb50ca"
+  integrity sha512-JQgzsGm795710v9PN61GjNSLjJBgiNmUAOnGWklATdfftZtsUJMOcjhal6t6szU8kwcqdcYRG82kRG2WbqYzaw==
 
 typescript@^4.6.3:
   version "4.6.3"
