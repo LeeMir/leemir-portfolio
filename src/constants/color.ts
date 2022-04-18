@@ -1,4 +1,4 @@
-export default {
+const color = {
   background: '#E0DEE6',
   black: '#131217',
   primary: '#656195',
@@ -7,4 +7,16 @@ export default {
   'secondary-light': '#C1B4CB',
   'secondary-dark': '#54516A',
   gray: '#9B9EAE',
+  error: '#E77A98'
 };
+
+export const gradient = [
+  color.primary,
+  '#AA6CA2',
+  color.error,
+  '#FF9780',
+  '#FFC56A',
+  '#F9F871'
+];
+
+export default color;

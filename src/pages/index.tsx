@@ -6,12 +6,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <Intro />
-      <Intro />
-      <Intro />
-      <Intro />
-      <Intro />
-      <Intro />
-      <Intro />
     </Layout>
   )
 }
