@@ -19,7 +19,7 @@ const Intro = () => {
     const typeit = new (TypeIt as any)('.text', {
       speed: 80,
     })
-      .type('LeeMir입니다.')
+      .type(' LeeMir입니다.')
       .move(null, {to: 'START', delay: 300})
       .type('꿈을 그리는 개발자, ')
       .move(null, {to: 'START', delay: 100})

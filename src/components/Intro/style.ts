@@ -26,6 +26,7 @@ export const TextWrapper = styled.div`
 export const Text = styled.span`
   font-size: 5rem;
   strong {
+    font-size: 7rem;
     font-weight: 700;
   }
 `;
