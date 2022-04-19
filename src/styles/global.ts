@@ -4,7 +4,10 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   html {
-    scroll-behavior: smooth;
+    font-size: calc(0.35vw + 8.74px);
+  }
+  * {
+    font-family: 'BMHannaAir', sans-serif;
   }
 `;
 

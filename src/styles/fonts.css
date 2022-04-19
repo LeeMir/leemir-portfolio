@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'BMYeonSung';
+	src: url('../assets/fonts/BMYeonSung.woff2') format('woff2'),
+		url('../assets/fonts/BMYeonSung.woff') format('woff');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'BMHannaPro';
+	src: url('../assets/fonts/BMHannaPro.woff2') format('woff2'),
+		url('../assets/fonts/BMHannaPro.woff') format('woff');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'BMHannaAir';
+	src: url('../assets/fonts/BMHannaAir.woff2') format('woff2'),
+		url('../assets/fonts/BMHannaAir.woff') format('woff');
+	font-display: fallback;
+}
