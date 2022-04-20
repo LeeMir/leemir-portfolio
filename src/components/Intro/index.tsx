@@ -17,16 +17,17 @@ const Intro = () => {
       sizeVariations: 50,
     });
     const typeit = new (TypeIt as any)('.text', {
-      speed: 80,
+      speed: 100,
     })
-      .type(' LeeMir입니다.')
+      .pause(1000)
+      .type(' LeeMir입니다.') // 11자
       .move(null, {to: 'START', delay: 300})
-      .type('꿈을 그리는 개발자, ')
+      .type('꿈을 그리는 개발자, ') // 12자
       .move(null, {to: 'START', delay: 100})
       .move(1)
-      .pause(80)
+      .pause(100)
       .delete(1)
-      .pause(80)
+      .pause(100)
       .type('<strong>꿈</strong>')
       .go();
   }, []);
