@@ -5,6 +5,7 @@ import TypeIt from 'typeit';
 import { Background, Container, TagContainer, Text, TextWrapper } from './style';
 import { gradient } from '../../constants/color';
 import Tag from './Tag';
+import Section from '../Section';
 
 const Intro = () => {
   useLayoutEffect(() => {
@@ -32,19 +33,21 @@ const Intro = () => {
       .go();
   }, []);
   return (
-    <Container>
-      <TextWrapper>
-        <Text className='text' />
-      </TextWrapper>
-      <TagContainer>
-        <Tag string='#FE' idx={4} />
-        <Tag string='#UI/UX' idx={3} />
-        <Tag string='#JS' idx={2} />
-        <Tag string='#TS' idx={1} />
-        <Tag string='#React' idx={0} />
-      </TagContainer>
-      <Background className='intro-background' />
-    </Container>
+    <Section>
+      <Container>
+        <TextWrapper>
+          <Text className='text' />
+        </TextWrapper>
+        <TagContainer>
+          <Tag string='#FE' idx={4} />
+          <Tag string='#UI/UX' idx={3} />
+          <Tag string='#JS' idx={2} />
+          <Tag string='#TS' idx={1} />
+          <Tag string='#React' idx={0} />
+        </TagContainer>
+        <Background className='intro-background' />
+      </Container>
+    </Section>
   );
 };
 
