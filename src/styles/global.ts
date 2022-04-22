@@ -6,6 +6,12 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: calc(0.35vw + 8.74px);
   }
+  body {
+    width: 200vw;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
   span {
     font-family: 'BMHannaAir', sans-serif;
   }
