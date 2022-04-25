@@ -8,19 +8,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [pos, moveSection] = useMoveSection({x: 0, y: 0});
   const eventListener = () => {
     document.addEventListener('keyup', (e) => {
-      switch (e.key) {
-        case 'ArrowUp':
-          moveSection(move.up);
-          break;
-        case 'ArrowRight':
-          moveSection(move.right);
-          break;
-        case 'ArrowDown':
-          moveSection(move.down);
-          break;
-        case 'ArrowLeft':
-          moveSection(move.left);
-          break;  
+      const input = e.key.toLowerCase();
+      if (Object.values(move).includes(input)) {
+        moveSection(input);
       }
     });
   };

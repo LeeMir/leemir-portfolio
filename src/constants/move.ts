@@ -1,6 +1,10 @@
 export default {
-  left: 'left',
-  right: 'right',
-  down: 'down',
-  up: 'up'
+  leftKB: 'a',
+  leftArrow: 'arrowleft',
+  rightKB: 'd',
+  rightArrow: 'arrowright',
+  downKB: 's',
+  downArrow: 'arrowdown',
+  upKB: 'w',
+  upArrow: 'arrowup',
 }

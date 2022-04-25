@@ -8,16 +8,20 @@ const useMoveSection = (initialPos: IPos): ReturnTypes => {
   const [pos, setPos] = useState(initialPos);
   const moveSection = (action: string) => {
     switch (action) {
-      case move.up:
+      case move.upKB:
+      case move.upArrow:
         setPos((prev) => {return {x: prev.x, y: prev.y + 100}});
         break;
-      case move.right:
+      case move.rightKB:
+      case move.rightArrow:
         setPos((prev) => {return {x: prev.x - 100, y: prev.y}});
         break;
-      case move.down:
+      case move.downKB:
+      case move.downArrow:
         setPos((prev) => {return {x: prev.x, y: prev.y - 100}});
         break;
-      case move.left:
+      case move.leftKB:
+      case move.leftArrow:
         setPos((prev) => {return {x: prev.x + 100, y: prev.y}});
         break;
     }
