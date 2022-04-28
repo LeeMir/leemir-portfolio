@@ -41,8 +41,17 @@ export const Container = styled.div`
   align-items: flex-start;
 `;
 
-export const Background = styled.canvas`
+export const Canvas = styled.canvas`
   position: absolute;
+  z-index: 1;
+`;
+
+export const Background = styled.img`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 0;
 `;
 
@@ -52,6 +61,7 @@ export const TextWrapper = styled.div`
   z-index: 100;
   width: 50rem;
   height: 17rem;
+  margin-top: 5rem;
   cursor: default;
   user-select: none;
 `;

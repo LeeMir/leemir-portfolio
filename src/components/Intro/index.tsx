@@ -2,15 +2,16 @@ import React, { useLayoutEffect } from 'react';
 import Particles from 'particlesjs';
 import TypeIt from 'typeit';
 
-import { Background, Container, TagContainer, Text, TextWrapper } from './style';
+import { Background, Canvas, Container, TagContainer, Text, TextWrapper } from './style';
 import { gradient } from '../../constants/color';
 import Tag from './Tag';
 import Section from '../Section';
+import BGImg from '../../assets/images/intro-background.svg';
 
 const Intro = () => {
   useLayoutEffect(() => {
     Particles.init({
-      selector: '.intro-background',
+      selector: '.intro-canvas',
       color: Object.values(gradient),
       connectParticles: false,
       speed: 0.4,
@@ -45,7 +46,8 @@ const Intro = () => {
           <Tag string='#TS' idx={1} />
           <Tag string='#React' idx={0} />
         </TagContainer>
-        <Background className='intro-background' />
+        <Canvas className='intro-canvas' />
+        <Background src={BGImg} />
       </Container>
     </Section>
   );
