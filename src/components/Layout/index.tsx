@@ -1,12 +1,29 @@
-import React from 'react';
-import GlobalStyle from '../../styles/global';
-import { Wrapper } from './style';
+import React, { useEffect } from 'react';
+import move from '../../constants/move';
+import useMoveSection from '../../hooks/useMoveSection';
+
+import { Container, Wrapper } from './style';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [pos, moveSection] = useMoveSection({x: 0, y: 0});
+  const eventListener = () => {
+    document.addEventListener('keyup', (e) => {
+      const input = e.key.toLowerCase();
+      if (Object.values(move).includes(input)) {
+        moveSection(input);
+      }
+    });
+  };
+
+  useEffect(() => {
+    eventListener();
+  }, []);
+
   return (
     <Wrapper>
-      {children}
-      <GlobalStyle />
+      <Container x={pos.x} y={pos.y}>
+        {children}
+      </Container>
     </Wrapper>
   );
 };

@@ -1,15 +1,16 @@
 import styled from 'styled-components';
-import color from '../../constants/color';
+import { IPos } from '../../types/position';
 
 export const Wrapper = styled.div`
-  scroll-snap-type: y mandatory;
   width: 100vw;
   height: 100vh;
-  scroll-padding: 30% 0;
-  background-color: ${color.background};
-  overflow: auto;
-  & > div {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
+  overflow: hidden;
+`;
+
+export const Container = styled.div<IPos>`
+  display: flex;
+  flex-wrap: wrap;
+  width: 200vw;
+  transform: translateX(${(props) => props.x}vw) translateY(${(props) => props.y}vh);
+  transition: transform 0.5s ease-in-out;
 `;

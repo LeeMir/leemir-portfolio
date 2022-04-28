@@ -2,14 +2,16 @@ import React, { useLayoutEffect } from 'react';
 import Particles from 'particlesjs';
 import TypeIt from 'typeit';
 
-import { Background, Container, TagContainer, Text, TextWrapper } from './style';
+import { Background, Canvas, Container, TagContainer, Text, TextWrapper } from './style';
 import { gradient } from '../../constants/color';
 import Tag from './Tag';
+import Section from '../Section';
+import BGImg from '../../assets/images/intro-background.svg';
 
 const Intro = () => {
   useLayoutEffect(() => {
     Particles.init({
-      selector: '.intro-background',
+      selector: '.intro-canvas',
       color: Object.values(gradient),
       connectParticles: false,
       speed: 0.4,
@@ -17,33 +19,37 @@ const Intro = () => {
       sizeVariations: 50,
     });
     const typeit = new (TypeIt as any)('.text', {
-      speed: 80,
+      speed: 100,
     })
-      .type('LeeMir입니다.')
+      .pause(1000)
+      .type(' LeeMir입니다.') // 11자
       .move(null, {to: 'START', delay: 300})
-      .type('꿈을 그리는 개발자, ')
+      .type('꿈을 그리는 개발자, ') // 12자
       .move(null, {to: 'START', delay: 100})
       .move(1)
-      .pause(80)
+      .pause(100)
       .delete(1)
-      .pause(80)
+      .pause(100)
       .type('<strong>꿈</strong>')
       .go();
   }, []);
   return (
-    <Container>
-      <TextWrapper>
-        <Text className='text' />
-      </TextWrapper>
-      <TagContainer>
-        <Tag string='#FE' idx={4} />
-        <Tag string='#UI/UX' idx={3} />
-        <Tag string='#JS' idx={2} />
-        <Tag string='#TS' idx={1} />
-        <Tag string='#React' idx={0} />
-      </TagContainer>
-      <Background className='intro-background' />
-    </Container>
+    <Section>
+      <Container>
+        <TextWrapper>
+          <Text className='text' />
+        </TextWrapper>
+        <TagContainer>
+          <Tag string='#FE' idx={4} />
+          <Tag string='#UI/UX' idx={3} />
+          <Tag string='#JS' idx={2} />
+          <Tag string='#TS' idx={1} />
+          <Tag string='#React' idx={0} />
+        </TagContainer>
+        <Canvas className='intro-canvas' />
+        <Background src={BGImg} />
+      </Container>
+    </Section>
   );
 };
 

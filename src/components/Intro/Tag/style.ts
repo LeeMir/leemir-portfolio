@@ -22,7 +22,7 @@ export const Wrapper = styled.button<IWrapper>`
   border-radius: 10rem;
   font-size: 1.8rem;
   transition: all 0.2s ease-in-out;
-  animation: ${appearAnimation} 0.5s ease-in-out ${(props) => 7 - 0.5 * props.idx}s forwards;
+  animation: ${appearAnimation} 0.5s ease-in-out ${(props) => 9 - 0.5 * props.idx}s forwards;
 
   span {
     padding: 1rem;
