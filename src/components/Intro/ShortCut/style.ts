@@ -27,7 +27,7 @@ export const Wrapper = styled.button<IWrapper>`
   box-shadow: 0 5px 4px rgba(0,0,0,.5);
   border: none;
   cursor: pointer;
-  animation: ${appearAnimation} 0.6s ease-in-out ${(props) => 2.3 + 0.6 * props.idx}s forwards;
+  animation: ${appearAnimation} 0.6s ease-in-out ${(props) => 2.8 + 0.6 * props.idx}s forwards;
 
   img {
     width: 75%;

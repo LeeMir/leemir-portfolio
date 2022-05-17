@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import Particles from 'particlesjs';
 
-import { Background, Canvas, Container, SubTitle, TagContainer, TextWrapper, Title, TitleWrapper } from './style';
+import { Background, BackgroundWrapper, Canvas, Container, SubTitle, TagContainer, TextWrapper, Title, TitleWrapper } from './style';
 import { gradient } from '../../constants/color';
 import Section from '../Section';
 import BGImg from '../../assets/images/intro-background.svg';
@@ -34,7 +34,9 @@ const Intro = () => {
           <ShortCut src={TistoryIcon} idx={1} to='https://think-thing.tistory.com' />
         </TagContainer>
         <Canvas className='intro-canvas' />
-        <Background src={BGImg} />
+        <BackgroundWrapper>
+          <Background src={BGImg} />
+        </BackgroundWrapper>
       </Container>
     </Section>
   );

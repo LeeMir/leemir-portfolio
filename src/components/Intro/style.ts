@@ -11,14 +11,32 @@ const openTitle = keyframes`
 
 const openSubTitle = keyframes`
   0% {
-    opacity: 0.3;
-    transform: translateY(1rem);
+    opacity: 0.5;
+    transform: translateY(0.5rem);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 `;
+
+const openBackground = keyframes`
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+`;
+
+const openBackgroundParticle = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+`
 
 export const Container = styled.div`
   display: flex;
@@ -33,16 +51,27 @@ export const Container = styled.div`
 export const Canvas = styled.canvas`
   position: absolute;
   z-index: 1;
-  opacity: 0.3;
+  opacity: 0;
+  animation: ${openBackgroundParticle} 0.8s ease-in-out 4.0s forwards;
+`;
+
+export const BackgroundWrapper = styled.div`
+  width: 0;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
+  animation: ${openBackground} 1.0s ease-in-out forwards;
 `;
 
 export const Background = styled.img`
-  width: 100%;
-  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  width: 100vw;
+  height: 100%;
 `;
 
 export const TextWrapper = styled.div`
@@ -59,7 +88,7 @@ export const TextWrapper = styled.div`
 export const TitleWrapper = styled.div`
   overflow: hidden;
   width: 0;
-  animation: ${openTitle} 1s ease-in-out 0.5s forwards;
+  animation: ${openTitle} 1.0s ease-in-out 1.0s forwards;
 `
 
 export const Title = styled.span`
@@ -75,7 +104,7 @@ export const SubTitle = styled.div`
   font-family: 'BMHannaAir';
   font-size: 1.5rem;
   opacity: 0;
-  animation: ${openSubTitle} 0.8s ease-in-out 1.5s forwards;
+  animation: ${openSubTitle} 0.8s ease-in-out 2.0s forwards;
 `;
 
 export const TagContainer = styled.div`
