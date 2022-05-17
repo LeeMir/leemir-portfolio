@@ -1,12 +1,13 @@
 import React, { useLayoutEffect } from 'react';
 import Particles from 'particlesjs';
-import TypeIt from 'typeit';
 
-import { Background, Canvas, Container, TagContainer, Text, TextWrapper } from './style';
+import { Background, BackgroundWrapper, Canvas, Container, SubTitle, TagContainer, TextWrapper, Title, TitleWrapper } from './style';
 import { gradient } from '../../constants/color';
-import Tag from './Tag';
 import Section from '../Section';
 import BGImg from '../../assets/images/intro-background.svg';
+import GithubIcon from '../../assets/images/icon-github.svg';
+import TistoryIcon from '../../assets/images/icon-tistory.svg';
+import ShortCut from './ShortCut';
 
 const Intro = () => {
   useLayoutEffect(() => {
@@ -14,40 +15,28 @@ const Intro = () => {
       selector: '.intro-canvas',
       color: Object.values(gradient),
       connectParticles: false,
-      speed: 0.4,
+      speed: 0.2,
       maxParticles: 20,
       sizeVariations: 50,
     });
-    const typeit = new (TypeIt as any)('.text', {
-      speed: 100,
-    })
-      .pause(1000)
-      .type(' LeeMir입니다.') // 11자
-      .move(null, {to: 'START', delay: 300})
-      .type('꿈을 그리는 개발자, ') // 12자
-      .move(null, {to: 'START', delay: 100})
-      .move(1)
-      .pause(100)
-      .delete(1)
-      .pause(100)
-      .type('<strong>꿈</strong>')
-      .go();
   }, []);
   return (
     <Section>
       <Container>
         <TextWrapper>
-          <Text className='text' />
+          <TitleWrapper>
+            <Title>LeeMir</Title>
+          </TitleWrapper>
+          <SubTitle>"꿈을 그리는 FE 개발자"</SubTitle>
         </TextWrapper>
         <TagContainer>
-          <Tag string='#FE' idx={4} />
-          <Tag string='#UI/UX' idx={3} />
-          <Tag string='#JS' idx={2} />
-          <Tag string='#TS' idx={1} />
-          <Tag string='#React' idx={0} />
+          <ShortCut src={GithubIcon} idx={0} to='https://github.com/LeeMir' />
+          <ShortCut src={TistoryIcon} idx={1} to='https://think-thing.tistory.com' />
         </TagContainer>
         <Canvas className='intro-canvas' />
-        <Background src={BGImg} />
+        <BackgroundWrapper>
+          <Background src={BGImg} />
+        </BackgroundWrapper>
       </Container>
     </Section>
   );
