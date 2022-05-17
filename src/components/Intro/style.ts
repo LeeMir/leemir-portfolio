@@ -1,33 +1,22 @@
 import styled, { keyframes } from 'styled-components';
-import color, { gradient } from '../../constants/color';
 
-const gradientAnimation = keyframes`
+const openTitle = keyframes`
   0% {
-    color: ${gradient[0]};
-  }
-  20% {
-    color: ${gradient[1]};
-  }
-  40% {
-    color: ${gradient[2]};
-  }
-  60% {
-    color: ${gradient[3]};
-  }
-  80% {
-    color: ${gradient[4]};
+    width: 0%;
   }
   100% {
-    color: ${gradient[5]};
+    width: 100%;
   }
 `;
 
-const cresendoAnimation = keyframes`
-  from {
-    font-size: 5rem;
+const openSubTitle = keyframes`
+  0% {
+    opacity: 0.3;
+    transform: translateY(1rem);
   }
-  to {
-    font-size: 8rem;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 `;
 
@@ -38,12 +27,13 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 export const Canvas = styled.canvas`
   position: absolute;
   z-index: 1;
+  opacity: 0.3;
 `;
 
 export const Background = styled.img`
@@ -56,33 +46,41 @@ export const Background = styled.img`
 `;
 
 export const TextWrapper = styled.div`
-  position: relative;
-  left: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   z-index: 100;
-  width: 50rem;
-  height: 17rem;
-  margin-top: 5rem;
+  padding: 2rem;
+  justify-content: center;
   cursor: default;
   user-select: none;
 `;
 
-export const Text = styled.span`
-  font-size: 5rem;
-  strong {
-    font-weight: 700;
-    color: ${color.primary};
-    animation: ${cresendoAnimation} 2s ease-in-out forwards;
-    &:hover {
-      animation: ${cresendoAnimation} 2s ease-in-out forwards,
-                ${gradientAnimation} 2.5s linear infinite alternate;
-    }
-  }
+export const TitleWrapper = styled.div`
+  overflow: hidden;
+  width: 0;
+  animation: ${openTitle} 1s ease-in-out 0.5s forwards;
+`
+
+export const Title = styled.span`
+  display: inline-block;
+  font-family: 'GreatVibes';
+  font-size: 7rem;
+  padding: 1rem;
+`;
+
+export const SubTitle = styled.div`
+  width: 100%;
+  text-align: center;
+  font-family: 'BMHannaAir';
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: ${openSubTitle} 0.8s ease-in-out 1.5s forwards;
 `;
 
 export const TagContainer = styled.div`
   display: flex;
   position: relative;
-  left: 5rem;
   z-index: 100;
   gap: 1rem;
 `;
