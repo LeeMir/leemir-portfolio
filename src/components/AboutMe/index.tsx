@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 
 import { sectionState } from '../../stores/section';
