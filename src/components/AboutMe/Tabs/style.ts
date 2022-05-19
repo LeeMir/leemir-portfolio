@@ -36,4 +36,8 @@ export const Wrapper = styled.button`
   outline: none;
   background: none;
   border: none;
+  cursor: pointer;
+  &:hover {
+    color: ${color.black};
+  }
 `;
