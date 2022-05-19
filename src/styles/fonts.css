@@ -25,3 +25,9 @@
 		url('../assets/fonts/GreatVibes.woff') format('woff');
 	font-display: fallback;
 }
+
+@font-face {
+	font-family: 'TossFaceFontMac';
+	src: url('../assets/fonts/TossFaceFontMac.ttf') format('ttf');
+	font-display: fallback;
+}

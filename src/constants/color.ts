@@ -7,7 +7,8 @@ const color = {
   'secondary-light': '#C1B4CB',
   'secondary-dark': '#54516A',
   gray: '#9B9EAE',
-  error: '#E77A98'
+  error: '#E77A98',
+  white: '#FFFFFF'
 };
 
 export const gradient = [

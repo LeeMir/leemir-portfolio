@@ -16,8 +16,8 @@ export const sectionArr = [
 
 export const sectionPos = [
   { x: 0, y: 0 }, // intro
-  { x: -100, y: 0 }, // about
-  { x: 0, y: -100 }, // experience
+  { x: 0, y: -100 }, // about
+  { x: -100, y: 0 }, // experience
   { x: -100, y: -100 }, // project
   { x: null, y: null } // error
 ];
