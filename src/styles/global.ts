@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   span {
-    font-family: 'BMHannaAir', sans-serif;
+    font-family: 'BMHannaAir', 'TossFaceFont', sans-serif;
   }
 `;
 
