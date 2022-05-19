@@ -5,10 +5,10 @@ import { Container } from '../style';
 const PersonalInfo = () => {
   return (
     <Container>
-      <MsgBox>이름: {process.env.REACT_APP_MY_NAME}</MsgBox>
-      <MsgBox>생년월일: {process.env.REACT_APP_MY_BIRTH}</MsgBox>
-      <MsgBox>이메일: {process.env.REACT_APP_MY_EMAIL}</MsgBox>
-      <MsgBox>전화번호: {process.env.REACT_APP_MY_PHONE}</MsgBox>
+      <MsgBox>이름: {process.env.GATSBY_MY_NAME}</MsgBox>
+      <MsgBox>생년월일: {process.env.GATSBY_MY_BIRTH}</MsgBox>
+      <MsgBox>이메일: {process.env.GATSBY_MY_EMAIL}</MsgBox>
+      <MsgBox>전화번호: {process.env.GATSBY_MY_PHONE}</MsgBox>
       <MsgBox>
         학력: <br />
         - 서울시립대학교 컴퓨터과학부 재학 (2017.03 ~) <br />
