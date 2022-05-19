@@ -6,7 +6,7 @@ export const Container = styled.section`
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;

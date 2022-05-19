@@ -55,7 +55,7 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   width: calc(100% - 2rem);
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   height: 100%;
   overflow: hidden;
 
