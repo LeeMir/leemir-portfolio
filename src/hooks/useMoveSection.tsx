@@ -16,18 +16,22 @@ const useMoveSection = (initialPos: IPos): ReturnTypes => {
         let {x, y} = prev;
         switch (action) {
           case move.upKB:
+          case move.upKBKR:
           case move.upArrow:
             y += (y === 0 ? 0 : 100);
             break;
           case move.rightKB:
+          case move.rightKBKR:
           case move.rightArrow:
             x -= (x <= -100 ? 0 : 100);
             break;
           case move.downKB:
+          case move.downKBKR:
           case move.downArrow:
             y -= (y <= -100 ? 0 : 100);
             break;
           case move.leftKB:
+          case move.leftKBKR:
           case move.leftArrow:
             x += (x === 0 ? 0 : 100);
             break;
