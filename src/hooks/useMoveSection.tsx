@@ -1,15 +1,15 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import move from '../constants/move';
 import { sectionState } from '../stores/section';
 import { IPos } from '../types/position';
-import { pos2Section } from '../utils/convert';
+import { pos2Section, section2Pos } from '../utils/convert';
 
 type ReturnTypes = [IPos, (action: string) => void];
 
 const useMoveSection = (initialPos: IPos): ReturnTypes => {
   const [pos, setPos] = useState(initialPos);
-  const setSection = useSetRecoilState(sectionState);
+  const [section, setSection] = useRecoilState(sectionState);
   const moveSection = useCallback(
     (action: string) => {
       setPos((prev) => {
@@ -43,6 +43,13 @@ const useMoveSection = (initialPos: IPos): ReturnTypes => {
   useEffect(() => {
     setSection(pos2Section(pos));
   }, [pos]);
+
+  useEffect(() => {
+    const nextPos = section2Pos(section);
+    if (nextPos.x !== null && nextPos.y !== null) {
+      setPos(nextPos);
+    }
+  }, [section])
   return [pos, moveSection];
 };
 
