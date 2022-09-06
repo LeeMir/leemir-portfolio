@@ -9,13 +9,15 @@ export const Circle = styled.div`
 
   cursor: pointer;
 
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-out;
 
   &.active {
-    background-color: ${color['secondary-dark']};
+    background-color: ${color['primary-dark']};
+    opacity: 0.7;
   }
 
   &:hover {
-    background-color: ${color.primary};
+    background-color: ${color['primary-dark']};
+    opacity: 1.0;
   }
 `;

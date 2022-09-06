@@ -7,12 +7,14 @@ import { Container, Wrapper } from './style';
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [pos, moveSection] = useMoveSection({x: 0, y: 0});
   const eventListener = () => {
-    document.addEventListener('keyup', (e) => {
-      const input = e.key.toLowerCase();
-      if (Object.values(move).includes(input)) {
-        moveSection(input);
-      }
-    });
+    setTimeout(() => {
+      document.addEventListener('keyup', (e) => {
+        const input = e.key.toLowerCase();
+        if (Object.values(move).includes(input)) {
+          moveSection(input);
+        }
+      });
+    }, 4500);
   };
 
   useEffect(() => {
