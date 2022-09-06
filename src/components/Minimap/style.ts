@@ -16,9 +16,9 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   width: 8rem;
   height: 6rem;
-  bottom: 2rem;
+  top: 2rem;
   right: 2rem;
-  opacity: 0;
+  opacity: 0.2;
 
   background-color: ${color.gray};
   border-radius: 1rem;
@@ -27,7 +27,7 @@ export const Container = styled.div`
   justify-items: center;
 
   transition: opacity 0.2s ease-out;
-  animation: ${openMinimap} 0.3s ease-in-out 4.5s forwards;
+  animation: ${openMinimap} 0.3s ease-in-out 4.5s backwards;
 
   &:hover {
     opacity: 0.55;

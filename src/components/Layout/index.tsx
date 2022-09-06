@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           moveSection(input);
         }
       });
-    }, 4500);
+    }, 5500);
   };
 
   useEffect(() => {
