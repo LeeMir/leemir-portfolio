@@ -8016,17 +8016,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-type@npm:^16.5.4":
-  version: 16.5.4
-  resolution: "file-type@npm:16.5.4"
-  dependencies:
-    readable-web-to-node-stream: ^3.0.0
-    strtok3: ^6.2.4
-    token-types: ^4.1.1
-  checksum: d983c0f36491c57fcb6cc70fcb02c36d6b53f312a15053263e1924e28ca8314adf0db32170801ad777f09432c32155f31715ceaee66310947731588120d7ec27
-  languageName: node
-  linkType: hard
-
 "filename-reserved-regex@npm:^2.0.0":
   version: 2.0.0
   resolution: "filename-reserved-regex@npm:2.0.0"
@@ -8407,7 +8396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^3.22.0":
+"gatsby-core-utils@npm:^3.20.0, gatsby-core-utils@npm:^3.22.0":
   version: 3.22.0
   resolution: "gatsby-core-utils@npm:3.22.0"
   dependencies:
@@ -8771,23 +8760,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^4.22.0":
-  version: 4.22.0
-  resolution: "gatsby-source-filesystem@npm:4.22.0"
+"gatsby-source-filesystem@npm:4.20.0":
+  version: 4.20.0
+  resolution: "gatsby-source-filesystem@npm:4.20.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     chokidar: ^3.5.3
-    file-type: ^16.5.4
+    file-type: ^16.5.3
     fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.22.0
+    gatsby-core-utils: ^3.20.0
+    got: ^9.6.0
     md5-file: ^5.0.0
     mime: ^2.5.2
     pretty-bytes: ^5.4.1
+    progress: ^2.0.3
     valid-url: ^1.0.9
-    xstate: 4.32.1
+    xstate: ^4.26.1
   peerDependencies:
     gatsby: ^4.0.0-next
-  checksum: 183c7a298cd6cacb79780066656d259159d48b7536e1874c21088fdfe4104150a63312ab7d201fc812dd8393454b709427e6a0f7ffc7c014ecc0add2d3894e31
+  checksum: 16c0eed83cafe879a5117b2abd1e8c3f4b20825e98583ceeb8479dfa1ed6e5f43074b02d7ad64dcbf3fee9b6bcab47e96c1fe0e5f6ecac4aac0efc809974f967
   languageName: node
   linkType: hard
 
@@ -11066,7 +11057,7 @@ __metadata:
     gatsby-plugin-sharp: ^4.22.0
     gatsby-plugin-sitemap: ^5.22.0
     gatsby-plugin-styled-components: ^5.22.0
-    gatsby-source-filesystem: ^4.22.0
+    gatsby-source-filesystem: 4.20.0
     gatsby-transformer-sharp: ^4.22.0
     netlify-cms-app: ^2.15.72
     particlesjs: ^2.2.3
@@ -19453,6 +19444,13 @@ __metadata:
   version: 4.32.1
   resolution: "xstate@npm:4.32.1"
   checksum: c16298b2b3dab7689da99d5b1e5128d2ca3bf381f37c8cb95e4af83bb1044b9251629fc00758f7f31785a72c2ddddd26f602b2801e6068cd78373b7f6dd6c28b
+  languageName: node
+  linkType: hard
+
+"xstate@npm:^4.26.1":
+  version: 4.33.5
+  resolution: "xstate@npm:4.33.5"
+  checksum: 124898d48547cdf46e9d26460fccd0632bd59505f5f1d968a9b21b04580eaa210ac289bb2dcd61a64f837fc4fba15ee20c3dc16b899dd637949c912b25fd0821
   languageName: node
   linkType: hard
 
